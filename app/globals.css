@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* Brand colors are sampled from the official logo; the client asked for exact matches. */
+@theme {
+  --font-heading: var(--font-fredoka), ui-rounded, ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-nunito), ui-rounded, ui-sans-serif, system-ui, sans-serif;
+  --font-reading: var(--font-literata), Georgia, "Times New Roman", serif;
+
+  --color-paper: #ffffff;
+  --color-ink: #2f1b10;
+  --color-muted: #6a4b3b;
+  --color-bark: #5a1800;
+
+  --color-blue: #0084d8;
+  --color-blue-strong: #006ccc;
+  --color-blue-deep: #005a8a;
+  --color-green: #42ae00;
+  --color-green-strong: #007e00;
+  --color-sun: #fcb400;
+  --color-orange: #fc4e0c;
+  --color-orange-strong: #d93d00;
+  --color-purple: #6612ba;
+  --color-heart: #fc0c0c;
+  --color-heart-strong: #d0121a;
+
+  --color-sky: #eaf5fd;
+  --color-meadow: #eff8e7;
+  --color-cream: #fff7df;
+  --color-blush: #fff0ea;
+  --color-lilac: #f4ecfc;
+  --color-mist: #f6f8f5;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Highlighter strokes behind key words, echoing a kid's marker drawing. */
+.marker {
+  background-image: linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0 0.08em;
+}
+
+.marker-sun {
+  --marker: color-mix(in srgb, var(--color-sun) 60%, transparent);
+}
+
+.marker-sky {
+  --marker: color-mix(in srgb, var(--color-blue) 30%, transparent);
+}
+
+.marker-meadow {
+  --marker: color-mix(in srgb, var(--color-green) 35%, transparent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-blue-strong);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+.animate-sway {
+  animation: sway 14s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
