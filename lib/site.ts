@@ -21,8 +21,8 @@ export const email = "rheomoon@gmail.com";
 export const facebookUrl =
   "https://www.facebook.com/profile.php?id=61595596540757";
 
-// Leave empty until the center's Venmo page exists; the donate button appears once set.
-export const venmoUrl = "";
+export const venmoUrl = "https://www.venmo.com/u/RheosHut";
+export const venmoHandle = "@RheosHut";
 
 // Google Calendar "embed" URL from the center's calendar settings; the calendar shows once set.
 export const calendarEmbedUrl = "";

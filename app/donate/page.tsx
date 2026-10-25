@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { buttonClass, textLink } from "@/components/ui";
-import { amounts, email, venmoUrl } from "@/lib/site";
+import { amounts, email, venmoHandle, venmoUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Donate",
@@ -45,31 +45,33 @@ export default function DonatePage() {
             </li>
           </ul>
 
-          {venmoUrl ? (
-            <a
-              href={venmoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${buttonClass("blue")} mt-8 w-full`}
-            >
-              <Heart className="h-5 w-5 fill-current" aria-hidden />
-              Donate with Venmo
+          <a
+            href={venmoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${buttonClass("blue")} mt-8 w-full`}
+          >
+            <Heart className="h-5 w-5 fill-current" aria-hidden />
+            Donate with Venmo
+          </a>
+          <p className="mt-4 text-center text-muted">
+            Or find us on Venmo at{" "}
+            <a href={venmoUrl} target="_blank" rel="noopener noreferrer" className={textLink}>
+              {venmoHandle}
             </a>
-          ) : (
-            <div className="mt-8 rounded-2xl bg-cream p-5">
-              <p className="font-semibold">Our Venmo donate button is coming soon.</p>
-              <p className="mt-1 text-muted">
-                Until then, email us and we&apos;ll send you a way to give.
-              </p>
+          </p>
+          <p className="mt-2 flex items-center justify-center gap-2 text-sm text-muted">
+            <Mail className="h-4 w-4" aria-hidden />
+            <span>
+              Questions about giving?{" "}
               <a
                 href={`mailto:${email}?subject=Gift%20for%20Rheo%27s%20Hut`}
-                className={`${buttonClass("blue")} mt-4 w-full`}
+                className={textLink}
               >
-                <Mail className="h-5 w-5" aria-hidden />
-                Email to give
+                Email us
               </a>
-            </div>
-          )}
+            </span>
+          </p>
 
           <p className="mt-6 flex gap-3 rounded-2xl border border-ink/10 p-4 text-sm leading-relaxed text-muted">
             <Info className="h-5 w-5 shrink-0 text-blue-strong" aria-hidden />
