@@ -1,19 +1,9 @@
 import { Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FacebookIcon, HeartIcon, Hills } from "@/components/decor";
-import { email, facebookUrl, memory, nav } from "@/lib/site";
-
-export function MemoryLine() {
-  return (
-    <div className="flex flex-col items-center text-center">
-      <HeartIcon className="h-7 w-7 text-heart" />
-      <p className="mt-2 font-heading text-xl font-semibold">{memory.name}</p>
-      <p className="mt-1 text-white/80">{memory.dates}</p>
-      <p className="mt-1 font-reading italic text-white/90">{memory.line}</p>
-    </div>
-  );
-}
+import { FacebookIcon, Hills } from "@/components/decor";
+import { MemoryLine } from "@/components/memory-line";
+import { email, facebookUrl, nav } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -23,7 +13,7 @@ export function SiteFooter() {
         <div className="mx-auto max-w-6xl">
           <MemoryLine />
 
-          <div className="mt-12 grid gap-10 border-t border-white/15 pt-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
+          <div className="grid gap-10 pt-4 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
             <div>
               <Link href="/" className="inline-flex items-center gap-3">
                 <span className="rounded-2xl bg-white p-2">
