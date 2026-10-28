@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s · Rheo's Hut",
   },
   description:
-    "A safe place to learn, create, play, and belong. Rheo's Hut Community Center is in development in Knoxville, Iowa, with a goal of opening in Fall 2028.",
+    "A safe place to learn, create, play, and belong. Rheo's Hut Community Center is in development in Knoxville, Iowa, with a goal of opening in Fall 2030.",
 };
 
 export default function RootLayout({

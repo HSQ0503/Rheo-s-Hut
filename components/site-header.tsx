@@ -16,7 +16,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 bg-white/95 shadow-[0_1px_0_rgba(47,27,16,0.08)] backdrop-blur">
       <div className="bg-blue-deep px-5 py-2 text-center text-sm text-white">
-        <span className="font-semibold">Coming Fall 2028 to Knoxville, Iowa.</span>{" "}
+        <span className="font-semibold">Coming Fall 2030 to Knoxville, Iowa.</span>{" "}
         <a
           href={facebookUrl}
           target="_blank"

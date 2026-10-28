@@ -36,7 +36,7 @@ export const welcome =
   "Every child deserves a safe place to learn, create, play, and belong. At Rheo's Hut Community Center, we are building a welcoming, inclusive space in Knoxville, Iowa, where children of all abilities can discover their potential, build friendships, and feel valued.";
 
 export const comingSoon =
-  "We're building something special for Knoxville. Rheo's Hut Community Center is currently in development with a goal of opening in the Fall of 2028. Join us as we work to create a safe place for every child to learn, create, play and belong. Your support can help bring this dream to life.";
+  "We're building something special for Knoxville. Rheo's Hut Community Center is currently in development with a goal of opening in the Fall of 2030. Join us as we work to create a safe place for every child to learn, create, play and belong. Your support can help bring this dream to life.";
 
 export const memory = {
   name: "In Loving Memory of Rheo Moon Moss",
@@ -130,7 +130,7 @@ export const roadmap: { label: string; detail: string; status: "done" | "now" | 
   { label: "Incorporated in Iowa", detail: "October 2026", status: "done" },
   { label: "Fundraising and 501(c)(3) application", detail: "In progress", status: "now" },
   { label: "Finding a home in Knoxville", detail: "Searching for a facility", status: "now" },
-  { label: "Doors open", detail: "Goal: Fall 2028", status: "next" },
+  { label: "Doors open", detail: "Goal: Fall 2030", status: "next" },
 ];
 
 export const story = [
