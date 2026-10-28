@@ -18,7 +18,7 @@ const plannedRates = [
 ];
 
 const details = [
-  { icon: CalendarDays, title: "Opening goal", body: "Fall 2028, depending on funding, a facility, and required approvals." },
+  { icon: CalendarDays, title: "Opening goal", body: "Fall 2030, depending on funding, a facility, and required approvals." },
   { icon: Clock, title: "When", body: "After school, plus full days in the summer and over school breaks." },
   { icon: MapPin, title: "Where", body: "Knoxville, Iowa. We're still searching for the right building." },
   { icon: Users, title: "How many", body: "Planned room for 50 children at one time." },

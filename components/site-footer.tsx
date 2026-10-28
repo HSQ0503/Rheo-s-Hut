@@ -23,7 +23,7 @@ export function SiteFooter() {
               </Link>
               <p className="mt-4 max-w-sm text-white/85">
                 A safe place to learn, create, play, and belong. In development in Knoxville, Iowa,
-                with a goal of opening in Fall 2028.
+                with a goal of opening in Fall 2030.
               </p>
             </div>
 
