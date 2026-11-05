@@ -253,8 +253,8 @@ export default function HomePage() {
               <Eyebrow className="text-bark">Fundraisers</Eyebrow>
               <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Mark your calendar</h2>
               <p className="mt-4 leading-relaxed text-muted">
-                Nothing is for sale yet. Order details will be posted on the fundraising page as soon
-                as they are ready.
+                New Year, New Art preorders are open now. Valentine&apos;s Day bags are still coming
+                soon, and details will be posted when ordering opens.
               </p>
               <ButtonLink href="/fundraising" variant="outline" className="mt-6">
                 Fundraising page
