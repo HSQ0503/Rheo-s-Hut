@@ -146,13 +146,56 @@ export const story = [
 
 export const amounts = ["$5", "$10", "$25", "$50", "$100", "$250", "$500"];
 
-export const fundraisers = [
+export type Fundraiser = {
+  name: string;
+  when: string;
+  status: string;
+  accent: Accent;
+  body: string;
+  orderDetails?: {
+    offerName: string;
+    flyer: {
+      src: string;
+      alt: string;
+    };
+    included: string[];
+    pricing: { quantity: string; price: string }[];
+    additionalKitPrice: string;
+    orderFields: string[];
+    available: string;
+  };
+};
+
+export const fundraisers: Fundraiser[] = [
   {
     name: "New Year, New Art",
     when: "December 2026",
-    status: "Coming soon",
+    status: "Preorders open",
     accent: "purple" as Accent,
-    body: "An art fundraiser to ring in the new year. Items, prices, and how to order will be posted here when orders open.",
+    body: "Preorder a Holiday Painting Kit and support Rheo's Hut Community Center.",
+    orderDetails: {
+      offerName: "Holiday Painting Kits Fundraiser",
+      flyer: {
+        src: "/holiday-painting-kits-flyer.png",
+        alt: "Holiday Painting Kits Fundraiser flyer for Rheo's Hut Community Center",
+      },
+      included: [
+        'One 8" x 10" canvas with a surprise outline',
+        "Small paint pots with lids",
+        "Paint brush(es)",
+        "Easy instructions",
+        "All-in-one kit",
+      ],
+      pricing: [
+        { quantity: "1 kit", price: "$20" },
+        { quantity: "2 kits", price: "$30" },
+        { quantity: "3 kits", price: "$45" },
+        { quantity: "4 kits", price: "$55" },
+      ],
+      additionalKitPrice: "Each additional kit: +$10",
+      orderFields: ["Full Name", "Number of Kits", "Phone Number", "Address (if delivery wanted)"],
+      available: "Kits available starting December 1st, 2026",
+    },
   },
   {
     name: "Valentine's Day bags",
