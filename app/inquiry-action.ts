@@ -37,7 +37,8 @@ export async function sendInquiry(
   }
 
   // Bots that fill the hidden field get the normal thank-you so they don't retry.
-  if (readField(formData, "company")) {
+  if (readField(formData, "leave_blank")) {
+    console.warn(`Spam trap filled on the ${kind} form, not sent`);
     redirect(`/thank-you/${kind}`);
   }
 
@@ -85,7 +86,7 @@ export async function sendInquiry(
   let sent = false;
   try {
     const resend = new Resend(apiKey);
-    const { error } = await resend.emails.send(
+    const { data, error } = await resend.emails.send(
       {
         from,
         to: [to],
@@ -97,6 +98,7 @@ export async function sendInquiry(
     );
     sent = !error;
     if (error) console.error("Resend rejected inquiry email", error);
+    else console.log(`Sent ${kind} form email, Resend id ${data?.id}`);
   } catch (error) {
     console.error("Inquiry email failed", error);
   }

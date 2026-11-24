@@ -32,9 +32,10 @@ export function InquiryForm({
       <h2 className="mb-6 text-2xl font-bold">{titles[kind]}</h2>
       <input type="hidden" name="kind" value={kind} />
       <div className="absolute -left-[9999px]" aria-hidden="true">
+        {/* Not "company": browser autofill fills that and real messages got dropped as spam. */}
         <label>
-          Company
-          <input name="company" tabIndex={-1} autoComplete="off" />
+          Leave this empty
+          <input name="leave_blank" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
 
